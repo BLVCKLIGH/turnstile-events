@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All events | Turnstile</title>
+  <link rel="icon" href="assets/posters/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/events.js" defer></script>
+</head>
+<body data-page="events">
+  <div id="site-header"></div>
+  <main id="main">
+    <div class="page-head"><div class="wrap"><h1>All events</h1><p>Search by name, or narrow down by category, city, date and price.</p></div></div>
+    <div class="filter-bar">
+      <div class="wrap" id="filters">
+        <div><label for="q">Search</label><input id="q" type="search" placeholder="Event, artist, venue or organiser" autocomplete="off"></div>
+        <div><label for="city">City</label><select id="city"><option value="">All cities</option></select></div>
+        <div><label for="when">Date</label>
+          <select id="when"><option value="">Any date</option><option value="weekend">This weekend</option><option value="week">Next 7 days</option><option value="month">Next 30 days</option><option value="later">More than 30 days away</option></select></div>
+        <div><label for="price">Price</label>
+          <select id="price"><option value="">Any price</option><option value="free">Free</option><option value="u250">Under R250</option><option value="u500">Under R500</option></select></div>
+        <div><label for="sort">Sort by</label>
+          <select id="sort"><option value="date">Soonest first</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="popular">Selling fastest</option></select></div>
+      </div>
+    </div>
+    <div class="wrap" style="padding-bottom:5rem">
+      <div class="chips" id="chips" role="group" aria-label="Category"></div>
+      <label class="check" style="margin-bottom:1rem"><input type="checkbox" id="hide-sold"> <span>Hide sold-out events</span></label>
+      <p class="result-line" id="count" aria-live="polite"></p>
+      <div class="event-grid" id="results"></div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>

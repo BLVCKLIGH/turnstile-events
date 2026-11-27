@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Turnstile | Tickets for events in Johannesburg, Cape Town and Durban</title>
+  <meta name="description" content="Find and book tickets for concerts, festivals, comedy, tech talks, workshops and outdoor events across South Africa.">
+  <link rel="icon" href="assets/posters/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <h1 id="hero-title">What's on this month</h1>
+          <p class="lead">Concerts, festivals, comedy, talks and workshops in Johannesburg, Cape Town, Durban and beyond. Book in under a minute and keep your tickets on your phone.</p>
+          <form class="hero-search" action="events.html" role="search">
+            <label class="sr-only" for="hero-q">Search events</label>
+            <input id="hero-q" name="q" type="search" placeholder="Search for an event, artist or venue">
+            <button class="btn btn-red" type="submit">Search</button>
+          </form>
+        </div>
+        <div id="hero-ticket"></div>
+      </div>
+    </section>
+
+    <section id="upcoming" aria-labelledby="up-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div><h2 id="up-title">Coming up soon</h2><p>The next events with tickets still available.</p></div>
+          <a class="btn btn-line" href="events.html">See all events</a>
+        </div>
+        <div class="event-grid" id="upcoming-grid"></div>
+      </div>
+    </section>
+
+    <section id="categories" aria-labelledby="cat-title" style="padding-top:0">
+      <div class="wrap">
+        <h2 id="cat-title">Browse by category</h2>
+        <div class="cats" id="cat-grid"></div>
+      </div>
+    </section>
+
+    <div class="organiser-band">
+      <div class="wrap">
+        <div><h2>Running an event?</h2><p>Sell tickets on Turnstile for a 4% fee per ticket. Free events cost nothing to list.</p></div>
+        <a class="btn btn-ink" href="mailto:organisers@turnstile.co.za">Talk to our team</a>
+      </div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>
